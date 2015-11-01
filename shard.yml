@@ -1,0 +1,10 @@
+name: cosvon
+version: 0.0.1
+
+authors:
+  - cielavenir <cielartisan@gmail.com>
+
+description: |
+  Comma Separated Value Object Notation
+
+license: Apache2
