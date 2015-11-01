@@ -1,4 +1,5 @@
 #coding:utf-8
+SPEC_DIR=File.expand_path(File.dirname(__FILE__))
 require "./spec_helper"
 
 cases=[
@@ -108,9 +109,9 @@ describe "CoSVON [default]" do
 	}
 end
 
-#describe "CoSVON.csv" do
-#	describe "Parsing dame backslash" do
-#		s=File.read("./hsalskcab.csv").encode("UTF-8")
-#		CoSVON.csv(s).should eq [["Hello \"World\"","我申\"May you have good luck.\""]]
-#	end
-#end
+describe "CoSVON.csv" do
+	it "Parsing dame backslash" do
+		s=File.read(SPEC_DIR+"/hsalskcab_utf8.csv")#.encode("UTF-8")
+		CoSVON.csv(s).should eq [["Hello \"World\"","我申\"May you have good luck.\""]]
+	end
+end
